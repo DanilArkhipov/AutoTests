@@ -32,8 +32,11 @@ public class UntitledTest
     [Test]
     public void untitled()
     {
-        driver.Navigate().GoToUrl("http://autotests-itis-bet.herokuapp.com/RegLog");
-        driver.Manage().Window.Size = new System.Drawing.Size(1536, 864);
+        driver.Navigate().GoToUrl("http://autotests-itis-bet.herokuapp.com/");
+        driver.Manage().Window.Maximize();
+        Thread.Sleep(1000);
+        driver.FindElement(By.CssSelector(".badge")).Click();
+        Thread.Sleep(1000);
         driver.FindElement(By.Id("logRegSwitch")).Click();
         driver.FindElement(By.Id("Email")).Click();
         Thread.Sleep(1000);
